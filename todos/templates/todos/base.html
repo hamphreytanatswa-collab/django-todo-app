@@ -125,11 +125,11 @@
     <a href="{% url 'todo_list' %}" class="nav-icon active">
       <i class="bi bi-grid-fill"></i>
     </a>
+    <a href="{% url 'todo_calendar' %}" class="nav-icon">
+      <i class="bi bi-calendar-event"></i>
+    </a>
     
     {% if user.is_authenticated %}
-      <div class="nav-icon"><i class="bi bi-rocket-takeoff"></i></div>
-      <div class="nav-icon"><i class="bi bi-cpu"></i></div>
-
       <form method="post" action="{% url 'logout' %}" style="position: absolute; bottom: 25px;">
         {% csrf_token %}
         <button type="submit" title="Logout" class="logout-btn-trigger">
